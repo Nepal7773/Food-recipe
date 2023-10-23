@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Food_recipe.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Food Recipe</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class=" min-vh-100">
+    <form id="form1" runat="server">
+        <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Food Recipe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/addrecipe">Add Recipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="d-flex" id="loginsignupbtn">
+                        <a runat="server" id="loginnavbtn" class="btn btn-outline-success mx-2" href="login">Login </a>
+                        <a runat="server" id="signupbtn" class="btn btn-outline-success mx-2" href="signup">Signup </a>
+                        <asp:Button ID="logoutbtn" CssClass="btn btn-outline-success mx-2" runat="server" Text="Logout" OnClick="logoutbtn_Click" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="min-vh-100">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class=" text-center text-lg-start">
+            <!-- Grid container -->
+            <div class="container-fluid p-4 border-top">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    
+                        <h5 class="text-uppercase text-center">Footer text</h5>
+                  
+
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+    <a class="text-light" href="/">foodrecipe.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </form>
+</body>
+</html>
